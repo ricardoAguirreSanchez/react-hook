@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, Fragment } from 'react';
+import { useState, Fragment, useEffect } from 'react';
 
 const Contador = () => {
 
@@ -7,6 +7,10 @@ const Contador = () => {
     const aumenta = ()=>{
         setNumero(numero + 1)
     };
+
+    useEffect(() => {
+        console.log(`el numero es ${numero}`)
+    })
 
     return (
         <Fragment>
